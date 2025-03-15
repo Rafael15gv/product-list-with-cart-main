@@ -1,0 +1,108 @@
+:root {
+  --ancho_compra: 120px;
+  --ancho_contenedor: 150px;
+  --alto: 30px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100dvh; */
+}
+
+
+
+.container {
+  background-color: grey;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-rows: .1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "titulo titulo  titulo  pedido"
+  "card   card    card    pedido"
+  "card   card    card    pedido"
+  "card   card    card    pedido";
+  gap: 15px;
+}
+
+.titulo {
+  grid-area: titulo;
+  background-color: red;
+}
+
+.card {
+  background-color: blue;
+  /* width: 300px; */
+  /* height: 400px; */
+  /* padding: 15px; */
+}
+.card__img {
+  grid-area: card;
+  background-color: green;
+  width: var(--ancho_contenedor);
+  height: var(--ancho_contenedor);
+  position: relative;
+  margin-bottom: 20px;
+  /* background-image: url(/assets/images/image-waffle-desktop.jpg); */
+  background-size:  cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+.carrito {
+  background-color: red;
+  height: var(--alto);
+  width: var(--ancho_compra);
+  border-radius: 20px;
+  position: absolute;
+  bottom: calc(-1 * var(--alto) / 2);
+  left: calc((var(--ancho_contenedor) - var(--ancho_compra)) / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.carrito__img {
+  background-color: rebeccapurple;
+  display: inline-block;
+  font-size: .7rem;
+}
+.carrito__add {
+  background-color: aqua;
+  font-size: .7rem;
+  display: inline-block;
+}
+.card__name {
+  background-color: brown;
+  font-size: .7rem;
+  margin-bottom: 5px;
+  
+}
+.card__fullName {
+  background-color: burlywood;
+  /* font-size: .7rem; */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.card__price {
+  background-color: coral;
+  font-weight: bold;
+}
+
+
+.pedido {
+  background-color: black;
+  width: 300px;
+  height: 300px;
+  color: white;
+  grid-area: pedido;
+
+}

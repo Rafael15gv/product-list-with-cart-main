@@ -1,74 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | Product list with cart</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+        <h1 class="titulo">Desserts</h1>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product list with cart</title>
+      <section class="card">
+        <div class="card__img">
+          imagen comida
+          <div class="carrito">
+            <img class="carrito__img" src="/assets/images/icon-add-to-cart.svg" alt="carrito" />
+            <p class="carrito__add">Add to Cart</p>
+          </div>
+        </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <p class="card__name">Waffle</p>
+        <p class="card__fullName">Waffle with Berries</p>
+        <p class="card__price">6.50</p>
+      </section>
+      <section class="card">
+        <div class="card__img">
+          imagen comida
+          <div class="carrito">
+            <img class="carrito__img" src="" alt="carrito" />
+            <p class="carrito__add">Add to Cart</p>
+          </div>
+        </div>
 
-  Desserts
+        <p class="card__name">Crème Brûlée</p>
+        <p class="card__fullName">Vanilla Bean Crème Brûlée</p>
+        <p class="card__price">7.00</p>
+      </section>
+      <section class="card">
+        <div class="card__img">
+          imagen comida
+          <div class="carrito">
+            <img class="carrito__img" src="" alt="carrito" />
+            <p class="carrito__add">Add to Cart</p>
+          </div>
+        </div>
 
-  Waffle with Berries
-  Waffle
-  6.50
-  Add to Cart
+        <p class="card__name">Macaron</p>
+        <p class="card__fullName">Macaron Mix of Five</p>
+        <p class="card__price">8.00</p>
+      </section>
+      <section class="card">
+        <div class="card__img">
+          imagen comida
+          <div class="carrito">
+            <img class="carrito__img" src="" alt="carrito" />
+            <p class="carrito__add">Add to Cart</p>
+          </div>
+        </div>
 
-  Vanilla Bean Crème Brûlée
-  Crème Brûlée
-  7.00
-  Add to Cart
+        <p class="card__name">Tiramisu</p>
+        <p class="card__fullName">Classic Tiramisu</p>
+        <p class="card__price">5.50</p>
+      </section>
+      <section class="card">
+        <div class="card__img">
+          imagen comida
+          <div class="carrito">
+            <img class="carrito__img" src="" alt="carrito" />
+            <p class="carrito__add">Add to Cart</p>
+          </div>
+        </div>
 
-  Macaron Mix of Five
-  Macaron
-  8.00
-  Add to Cart
+        <p class="card__name">Baklava</p>
+        <p class="card__fullName">Pistachio Baklava</p>
+        <p class="card__price">4.00</p>
+      </section>
+      <section class="card">
+        <div class="card__img">
+          imagen comida
+          <div class="carrito">
+            <img class="carrito__img" src="" alt="carrito" />
+            <p class="carrito__add">Add to Cart</p>
+          </div>
+        </div>
 
-  Classic Tiramisu
-  Tiramisu
-  5.50
-  Add to Cart
+        <p class="card__name">Pie</p>
+        <p class="card__fullName">Lemon Meringue Pie</p>
+        <p class="card__price">5.00</p>
+      </section>
+      <section class="card">
+        <div class="card__img">
+          imagen comida
+          <div class="carrito">
+            <img class="carrito__img" src="" alt="carrito" />
+            <p class="carrito__add">Add to Cart</p>
+          </div>
+        </div>
 
-  Pistachio Baklava
-  Baklava
-  4.00
-  Add to Cart
+        <p class="card__name">Cake</p>
+        <p class="card__fullName">Red Velvet Cake</p>
+        <p class="card__price">4.50</p>
+      </section>
+      <section class="card">
+        <div class="card__img">
+          imagen comida
+          <div class="carrito">
+            <img class="carrito__img" src="" alt="carrito" />
+            <p class="carrito__add">Add to Cart</p>
+          </div>
+        </div>
 
-  Lemon Meringue Pie
-  Pie
-  5.00
-  Add to Cart
+        <p class="card__name">Brownie</p>
+        <p class="card__fullName">Salted Caramel Brownie</p>
+        <p class="card__price">4.50</p>
+      </section>
+      <section class="card">
+        <div class="card__img">
+          imagen comida
+          <div class="carrito">
+            <img class="carrito__img" src="" alt="carrito" />
+            <p class="carrito__add">Add to Cart</p>
+          </div>
+        </div>
 
-  Red Velvet Cake
-  Cake
-  4.50
-  Add to Cart
+        <p class="card__name">Panna Cotta</p>
+        <p class="card__fullName">Vanilla Panna Cotta</p>
+        <p class="card__price">6.50</p>
+      </section>
+      
 
-  Salted Caramel Brownie
-  Brownie
-  4.50
-  Add to Cart
-
-  Vanilla Panna Cotta
-  Panna Cotta
-  6.50
-  Add to Cart
-
-  Your Cart (<!-- Quantity -->)
-  Your added items will appear here
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      </div>
+      <section class="pedido">
+        <h2 class="pedido__texto">Your Cart (Quantity) Your added items will appear here</h2>
+      </section>
+    </main>
+  </body>
 </html>
