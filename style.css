@@ -1,4 +1,16 @@
 :root {
+  /* ## Colors */
+
+  --Red-color: hsl(14, 86%, 42%);
+  --Green-color: hsl(159, 69%, 38%);
+  --Rose-50-color: hsl(20, 50%, 98%);
+  --Rose-100-color: hsl(13, 31%, 94%);
+  --Rose-300-color: hsl(14, 25%, 72%);
+  --Rose-400-color: hsl(7, 20%, 60%);
+  --Rose-500-color: hsl(12, 20%, 44%);
+  --Rose-900-color: hsl(14, 65%, 9%);
+
+  font-family: "Red Hat Text", sans-serif;
   --ancho_compra: 120px;
   --ancho_contenedor: 150px;
   --alto: 30px;
@@ -14,95 +26,126 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100dvh; */
+  background-color: var(--Rose-50-color);
 }
 
-
-
 .container {
-  background-color: grey;
-  min-height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
-  grid-template-rows: .1fr 1fr 1fr 1fr;
-  grid-template-areas: 
-  "titulo titulo  titulo  pedido"
-  "card   card    card    pedido"
-  "card   card    card    pedido"
-  "card   card    card    pedido";
+  grid-template-rows: 0.1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "titulo titulo  titulo  pedido"
+    "card   card    card    pedido"
+    "card   card    card    pedido"
+    "card   card    card    pedido";
   gap: 15px;
+  min-height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .titulo {
   grid-area: titulo;
-  background-color: red;
 }
 
-.card {
-  background-color: blue;
-  /* width: 300px; */
-  /* height: 400px; */
-  /* padding: 15px; */
-}
 .card__img {
   grid-area: card;
-  background-color: green;
   width: var(--ancho_contenedor);
   height: var(--ancho_contenedor);
   position: relative;
-  margin-bottom: 20px;
-  /* background-image: url(/assets/images/image-waffle-desktop.jpg); */
-  background-size:  cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 .carrito {
-  background-color: red;
-  height: var(--alto);
-  width: var(--ancho_compra);
-  border-radius: 20px;
-  position: absolute;
-  bottom: calc(-1 * var(--alto) / 2);
-  left: calc((var(--ancho_contenedor) - var(--ancho_compra)) / 2);
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  width: var(--ancho_compra);
+  height: var(--alto);
+  background-color: white;
+  position: absolute;
+  left: calc((var(--ancho_contenedor) - var(--ancho_compra)) / 2);
+  bottom: calc(-1 * var(--alto) / 2);
+  border: 1px solid #000;
+  border-radius: 20px;
 }
 .carrito__img {
-  background-color: rebeccapurple;
   display: inline-block;
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 .carrito__add {
-  background-color: aqua;
-  font-size: .7rem;
   display: inline-block;
+  font-size: 0.7rem;
+  font-weight: bolder;
 }
 .card__name {
-  background-color: brown;
-  font-size: .7rem;
   margin-bottom: 5px;
-  
+  font-size: 0.7rem;
+  color: gray;
 }
 .card__fullName {
-  background-color: burlywood;
-  /* font-size: .7rem; */
+  font-size: 0.7rem;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 .card__price {
-  background-color: coral;
   font-weight: bold;
+  color: var(--Red-color);
 }
 
-
 .pedido {
-  background-color: black;
-  width: 300px;
-  height: 300px;
-  color: white;
   grid-area: pedido;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: fit-content;
+  background-color: white;
+  color: var(--Rose-900-color);
+  padding: 20px;
+  border-radius: 20px;
+}
+.pedido__texto {
+  margin-bottom: 20px;
+}
+.pedido__img {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
 
+.pedido__p {
+  font-size: 0.7rem;
+  font-weight: bolder;
+}
+
+.card__img-1 {
+  background-image: url(/assets/images/image-waffle-desktop.jpg);
+}
+.card__img-2 {
+  background-image: url(/assets/images/image-creme-brulee-desktop.jpg);
+}
+.card__img-3 {
+  background-image: url(/assets/images/image-macaron-desktop.jpg);
+}
+.card__img-4 {
+  background-image: url(/assets/images/image-tiramisu-desktop.jpg);
+}
+.card__img-5 {
+  background-image: url(/assets/images/image-baklava-desktop.jpg);
+}
+.card__img-6 {
+  background-image: url(/assets/images/image-meringue-desktop.jpg);
+}
+.card__img-7 {
+  background-image: url(/assets/images/image-cake-desktop.jpg);
+}
+.card__img-8 {
+  background-image: url(/assets/images/image-brownie-desktop.jpg);
+}
+.card__img-9 {
+  background-image: url(/assets/images/image-panna-cotta-desktop.jpg);
 }
