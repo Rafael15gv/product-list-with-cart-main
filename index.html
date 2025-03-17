@@ -1,206 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frontend Mentor | Product list with cart</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main class="container">
-        <h1 class="titulo">Desserts</h1>
 
-      <section class="card">
-        <div class="card__img card__img-1">
-          
-          <button class="carrito" type="button">
-            <img class="carrito__img"/>
-            <p class="carrito__add">Add to Cart</p>
-            
-            <img class="signo menos hidden"/>
-            <p class="conteo hidden">1</p>
-            <img class="signo mas hidden"/>
-          </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | Product list with cart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <div class="left-panel">
+      <h1 class="titulo">Desserts</h1>
+      <div class="cards-container"></div>
+    </div>
+
+    <section class="pedido right-panel">
+      <h2 class="pedido__texto">Your Cart (<span class="cantidadArticulos"></span>)</h2>
+      <div class="pedido__img"></div>
+      <p class="pedido__p">Your added items will appear here</p>
+
+      <section class="cuenta">
+        <div class="order">
+          <p class="order__texto">Order Total</p>
+          <p class="order__total--price"></p>
         </div>
-
-        <p class="card__name">Waffle</p>
-        <p class="card__fullName">Waffle with Berries</p>
-        <p class="card__price">$6.50</p>
-      </section>
-      <section class="card">
-        <div class="card__img card__img-2">
-          
-          <button class="carrito" type="button">
-            <img class="carrito__img"/>
-            <p class="carrito__add">Add to Cart</p>
-            
-            <img class="signo menos hidden"/>
-            <p class="conteo hidden">1</p>
-            <img class="signo mas hidden"/>
-          </button>
+        <div class="cuenta__carbon">
+          <img class="img__carbon">
+          <p class="p__carbon">This is a carbon-neutral delivery</p>
         </div>
-
-        <p class="card__name">Crème Brûlée</p>
-        <p class="card__fullName">Vanilla Bean Crème Brûlée</p>
-        <p class="card__price">$7.00</p>
+        <button class="btn__confirm" type="button">Confirm Order</button>
       </section>
-      <section class="card">
-        <div class="card__img card__img-3">
-          
-          <button class="carrito" type="button">
-            <img class="carrito__img"/>
-            <p class="carrito__add">Add to Cart</p>
-            
-            <img class="signo menos hidden"/>
-            <p class="conteo hidden">1</p>
-            <img class="signo mas hidden"/>
-          </button>
-        </div>
+    </section>
+  </main>
 
-        <p class="card__name">Macaron</p>
-        <p class="card__fullName">Macaron Mix of Five</p>
-        <p class="card__price">$8.00</p>
-      </section>
-      <section class="card">
-        <div class="card__img card__img-4">
-          
-          <button class="carrito" type="button">
-            <img class="carrito__img"/>
-            <p class="carrito__add">Add to Cart</p>
-            
-            <img class="signo menos hidden"/>
-            <p class="conteo hidden">1</p>
-            <img class="signo mas hidden"/>
-          </button>
-        </div>
+  <script src="/index.js"></script>
+</body>
 
-        <p class="card__name">Tiramisu</p>
-        <p class="card__fullName">Classic Tiramisu</p>
-        <p class="card__price">$5.50</p>
-      </section>
-      <section class="card">
-        <div class="card__img card__img-5">
-          
-          <button class="carrito" type="button">
-            <img class="carrito__img"/>
-            <p class="carrito__add">Add to Cart</p>
-            
-            <img class="signo menos hidden"/>
-            <p class="conteo hidden">1</p>
-            <img class="signo mas hidden"/>
-          </button>
-        </div>
-
-        <p class="card__name">Baklava</p>
-        <p class="card__fullName">Pistachio Baklava</p>
-        <p class="card__price">$4.00</p>
-      </section>
-      <section class="card">
-        <div class="card__img card__img-6">
-          
-          <button class="carrito" type="button">
-            <img class="carrito__img"/>
-            <p class="carrito__add">Add to Cart</p>
-            
-            <img class="signo menos hidden"/>
-            <p class="conteo hidden">1</p>
-            <img class="signo mas hidden"/>
-          </button>
-        </div>
-
-        <p class="card__name">Pie</p>
-        <p class="card__fullName">Lemon Meringue Pie</p>
-        <p class="card__price">$5.00</p>
-      </section>
-      <section class="card">
-        <div class="card__img card__img-7">
-          
-          <button class="carrito" type="button">
-            <img class="carrito__img"/>
-            <p class="carrito__add">Add to Cart</p>
-            
-            <img class="signo menos hidden"/>
-            <p class="conteo hidden">1</p>
-            <img class="signo mas hidden"/>
-          </button>
-        </div>
-
-        <p class="card__name">Cake</p>
-        <p class="card__fullName">Red Velvet Cake</p>
-        <p class="card__price">$4.50</p>
-      </section>
-      <section class="card">
-        <div class="card__img card__img-8">
-          
-          <button class="carrito" type="button">
-            <img class="carrito__img"/>
-            <p class="carrito__add">Add to Cart</p>
-            
-            <img class="signo menos hidden"/>
-            <p class="conteo hidden">1</p>
-            <img class="signo mas hidden"/>
-          </button>
-        </div>
-
-        <p class="card__name">Brownie</p>
-        <p class="card__fullName">Salted Caramel Brownie</p>
-        <p class="card__price">$4.50</p>
-      </section>
-      <section class="card">
-        <div class="card__img card__img-9">
-          
-          <button class="carrito" type="button">
-            <img class="carrito__img"/>
-            <p class="carrito__add">Add to Cart</p>
-            
-            <img class="signo menos hidden"/>
-            <p class  ="conteo hidden">1</p>
-            <img class="signo mas hidden"/>
-          </button>
-        </div>
-
-        <p class="card__name">Panna Cotta</p>
-        <p class="card__fullName">Vanilla Panna Cotta</p>
-        <p class="card__price">$6.50</p>
-      </section>
-      
-
-      </div>
-
-      <section class="pedido">
-        <button class="btn" type="button">prueba</button>
-        <h2 class="pedido__texto">Your Cart (<span class="cantidadArticulos">Quantity</span>)</h2>
-        <div class="pedido__img"></div>
-        <p class="pedido__p">Your added items will appear here</p>
-      
-      
-      
-        <section class="cuenta">
-          <div class="order">
-            <p class="order__texto">Order Total</p>
-            <p class="order__total">$46.50</p>
-          </div>
-          <div class="cuenta__carbon">
-            <img class="img__carbon">
-            <p class="p__carbon">This is a carbon-neutral delivery</p>
-          </div>
-          <button class="btn__confirm" type="button">Confirm Order</button>
-        </section>
-      
-      
-      </section>
-
-    </main>
-    <script src="/index.js"></script>
-    <!-- <script src="/modulos/add-comida.js"></script> -->
-  </body>
 </html>
