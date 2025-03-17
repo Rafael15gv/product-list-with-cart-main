@@ -61,7 +61,7 @@ body {
 }
 .carrito {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: var(--ancho_compra);
   height: var(--alto);
@@ -71,10 +71,14 @@ body {
   bottom: calc(-1 * var(--alto) / 2);
   border: 1px solid #000;
   border-radius: 20px;
+  cursor: pointer;
+  padding: 0px 5px;
 }
 .carrito__img {
   display: inline-block;
   font-size: 0.7rem;
+  content: url(/assets/images/icon-add-to-cart.svg);
+  /* width: 30px; */
 }
 .carrito__add {
   display: inline-block;
@@ -111,10 +115,14 @@ body {
   margin-bottom: 20px;
 }
 .pedido__img {
-  background-color: green;
+  /* background-color: green; */
   width: 100px;
   height: 100px;
   margin-bottom: 20px;
+  background-image: url(/assets/images/illustration-empty-cart.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .pedido__p {
@@ -148,4 +156,133 @@ body {
 }
 .card__img-9 {
   background-image: url(/assets/images/image-panna-cotta-desktop.jpg);
+}
+
+.signo {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.menos {
+  content: url(/assets/images/icon-decrement-quantity.svg);
+}
+
+.mas {
+  content: url(/assets/images/icon-increment-quantity.svg);
+}
+
+.mas:hover,
+.menos:hover {
+  filter: invert(1);
+  background-color: black;
+  /* cursor: cell; */
+  border: none;
+}
+.hidden {
+  display: none;
+}
+
+/* PEDIDOS */
+.nuevoDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* background-color: rebeccapurple; */
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.nuevoDiv__titulo {
+  font-weight: bold;
+}
+.nuevoDiv__cantidad {
+  display: inline-block;
+  color: red;
+  font-weight: bold;
+  margin-right: 3px;
+}
+.nuevoDiv__valor {
+  display: inline-block;
+  margin-right: 5px;
+  color: gray;
+}
+.nuevoDiv__valor2 {
+  display: inline-block;
+  font-weight: bold;
+  color: gray;
+}
+
+.nuevoDiv__x {
+  background-image: url(assets/images/icon-remove-item.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  filter: invert(1);
+}
+
+/* STILOS PARA LA PARTE DE CONFIRMAR LA COMPRA */
+
+.cuenta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.order__texto {
+  font-size: 0.8rem;
+}
+.order__total {
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+.cuenta__carbon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 10px;
+  width: 100%;
+}
+
+.p__carbon {
+  font-size: 0.7rem;
+}
+.img__carbon {
+  background-image: url(/assets/images/icon-carbon-neutral.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.btn__confirm {
+  background-color: hsl(14, 86%, 42%);
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
 }
