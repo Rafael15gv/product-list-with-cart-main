@@ -30,19 +30,26 @@ body {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 2fr;
-  grid-template-rows: 0.1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "titulo titulo  titulo  pedido"
-    "card   card    card    pedido"
-    "card   card    card    pedido"
-    "card   card    card    pedido";
-  gap: 15px;
-  min-height: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 3rem;
+  width: 100%;
+  display: flex;
 }
+
+.left-panel {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+
 
 .titulo {
   grid-area: titulo;
