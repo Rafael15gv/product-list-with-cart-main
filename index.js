@@ -105,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
  * 3. Mostrar el control de cantidades en la tarjeta de los producots
  * 4. Al darle click ya sea en el mas o en el meno, debe aumentar y disminuir el numero de producto correspondiente y por ende el total y cantidad
  * 5. si se disminuye un producto que tiene una unica unidad agregada, se debe eliminar del carrito
+ * 6. Actualizar active states. Ver ejemplo en la seccion de design.
  * 
  * TBD
  * 
