@@ -111,6 +111,14 @@ body {
   padding: 20px;
   border-radius: 20px;
 }
+
+.pedidoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .pedido__texto {
   margin-bottom: 20px;
 }
@@ -286,3 +294,4 @@ body {
   color: white;
   cursor: pointer;
 }
+
